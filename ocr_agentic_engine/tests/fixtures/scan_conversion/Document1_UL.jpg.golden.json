@@ -1,0 +1,26 @@
+{
+  "_fixture": "ocr_agentic_engine/tests/fixtures/scan_conversion/Document1_UL.jpg",
+  "_page_count": 1,
+  "_block_count": 1,
+  "feature": "scan_conversion",
+  "text": "",
+  "blocks": {},
+  "handwriting_block_indices": [],
+  "category": null,
+  "category_confidence_min": 0.5,
+  "notes": "",
+  "_block_ocr": {
+    "0": {
+      "page": 0,
+      "kind": "figure",
+      "bbox": [
+        7,
+        0,
+        566,
+        138
+      ],
+      "confidence": 0.475,
+      "text": "入C AND STUDENTPILOT CERTIFICATE "
+    }
+  }
+}

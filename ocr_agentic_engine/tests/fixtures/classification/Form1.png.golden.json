@@ -1,0 +1,26 @@
+{
+  "_fixture": "ocr_agentic_engine/tests/fixtures/classification/Form1.png",
+  "_page_count": 1,
+  "_block_count": 1,
+  "feature": "classification",
+  "text": "",
+  "blocks": {},
+  "handwriting_block_indices": [],
+  "category": "form",
+  "category_confidence_min": 0.5,
+  "notes": "",
+  "_block_ocr": {
+    "0": {
+      "page": 0,
+      "kind": "figure",
+      "bbox": [
+        37,
+        63,
+        1377,
+        921
+      ],
+      "confidence": 0.787,
+      "text": "Applicant Must Complete ALL 2fms (Except For Shaded Areas)SE PRINT Form Approved OMB NO. 2120-0034FF-01.Application For:AanMedical Certicate □Studen P Cerfcate Aiman and 2.Class of MedicalCrtiicate AppldFor:□18□2nd □3rd Thiscenfies thatFune and adoress MEDICAL CERTIFICATE ANDSTUDENTPILOTCERTIFICATE 123CLASS 3.Last Name 4.Social Security Number 5.Address ohnny 213First Name Telephoe Nuber ns seeo 56iaa 3Middie Name 7890Nubr/Siret 123 Man treet Ca New xovu State/Cauny USA Zip Code Date of Binh W Sex 6.Date of Blrth 8100017.Color of Halr 8.Color of Eyes 2.8ex Clzenship Brown Brown M hasmet emediastanars priedinpan67Fedel 10.Type of Airman Certiicate(s) You Hold:AvatonReguletionsfor thsclassSf Medieal Cericae None □ATC Speclalist Flight Instructor 今□Recreational \n Airline Transport Flight Engineer Private □Oter \nCommercial Flight Navigator □Student \n11.Occupation 12.Employer \n13.Has Your FAA Airman Medical CertificteEver Been DeniedSuspended,or Revoked?\n□Yes ANO If yas,give date \nMMID 0\nTetar Pilot Time(Civiian Ordy)14.To Date 15.Past 6 manths 16.Date of Last FAA Medical Application \n100100MM/OO/YYYY No Prior Appiicaton \n17a.Do You Currently Use Any Medication (Prescriptionor Nonprescription)?\nNoYsyesbeolimionuedncckapro.eCS \n台□AIRMAN'S SIGNATURE 100\nfmore spacei regds1onthestuionshee.\n17.b.Do YouEver Uae Near Vision Contact Lens()WhioFing?□Yes No 18.MeDICI HIOY-HAVE YOUEVERIN YOUR LIFE BEENDIAGNOSED WTH,HADORDOYOU PRESENTLY HAVE ANYOF THEFOLLOWNG?ANSWYSONO nr   T "
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "_fixture": "ocr_agentic_engine/tests/fixtures/classification/WalmartReceipt.png",
+  "_page_count": 1,
+  "_block_count": 2,
+  "feature": "classification",
+  "text": "",
+  "blocks": {},
+  "handwriting_block_indices": [],
+  "category": "receipt",
+  "category_confidence_min": 0.5,
+  "notes": "",
+  "_block_ocr": {
+    "0": {
+      "page": 0,
+      "kind": "title",
+      "bbox": [
+        149,
+        79,
+        252,
+        109
+      ],
+      "confidence": 0.985,
+      "text": "Walmart ey.Live better.\n"
+    },
+    "1": {
+      "page": 0,
+      "kind": "text",
+      "bbox": [
+        46,
+        169,
+        351,
+        745
+      ],
+      "confidence": 0.985,
+      "text": "98788822HAPPY MART 131 N MAIN ST SUMMERVILLE ST# 1223 OP# 2112  TE# 1000 TR#\nPRODUCT SERIAL # 1\nPEANUTS 2.46T PRODUCTSERIAL#2\nTOMATOES 4.98T \nSUBTOTAL 7.44\nTAX 10.00%0.74\nTOTAL 8.18\nCASH TEND 0.00\nDEBIT TEND 0.00\nCHANGE DUE 0.00EFT DEBIT PAYFROMPRIMARY 0.00TOTAL PURCHASE ACCOUNT #131315REF#1332\nNETWORKID.0082 APPR CODE TERMINAL#3\n10/07/202005:52PM # ITEMS SOLD 4TC#3344"
+    }
+  }
+}

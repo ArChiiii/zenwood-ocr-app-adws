@@ -1,0 +1,110 @@
+{
+  "_fixture": "ocr_agentic_engine/tests/fixtures/classification/Invoice1.png",
+  "_page_count": 1,
+  "_block_count": 8,
+  "feature": "classification",
+  "text": "",
+  "blocks": {},
+  "handwriting_block_indices": [],
+  "category": "invoice",
+  "category_confidence_min": 0.5,
+  "notes": "",
+  "_block_ocr": {
+    "0": {
+      "page": 0,
+      "kind": "text",
+      "bbox": [
+        14,
+        11,
+        170,
+        109
+      ],
+      "confidence": 0.957,
+      "text": "GGMobile company 67h Martin street Alexander road 576832\nEmail:ggmobile@gmail.com Mobile:+12325325325GST:89\n"
+    },
+    "1": {
+      "page": 0,
+      "kind": "text",
+      "bbox": [
+        14,
+        134,
+        127,
+        218
+      ],
+      "confidence": 0.957,
+      "text": "Bill To \n\nThomas Martin \nThomas Martin \n375Park Ave #3308.\nSeagram Building \nNew York \n\n"
+    },
+    "2": {
+      "page": 0,
+      "kind": "text",
+      "bbox": [
+        433,
+        133,
+        635,
+        168
+      ],
+      "confidence": 0.957,
+      "text": "Invoice No:INV-038Invoice Date:07/01/2025"
+    },
+    "3": {
+      "page": 0,
+      "kind": "table",
+      "bbox": [
+        15,
+        228,
+        636,
+        466
+      ],
+      "confidence": 0.957,
+      "text": "<html><body><table><tbody><tr><td>SI. Description</td><td>Qty</td><td>Rate</td><td>Amount</td></tr><tr><td>1 RazerKrakenXGaming Headset</td><td>2</td><td>4 499,00</td><td>8 998,00</td></tr><tr><td>2 Microsoft Surface Laptop Go 2128GB SSD 8GBRAM</td><td>1 55990.00</td><td>55 990,00</td><td></td></tr><tr><td>3 Bose Sport Earbuds</td><td>1 17990,00</td><td>17 990,00</td><td></td></tr><tr><td>Total Quantity: 4 Payment Instructions Pay Cheque to John Doe</td><td colspan=\"2\">Total Quantity: 4</td><td>Subtotal Discount (4%) VAT (2%)</td></tr><tr><td>Payment Instructions</td><td colspan=\"2\">Discount (4%)</td><td>-S3 319.12</td></tr><tr><td>John Doe</td><td colspan=\"2\">Total</td><td>$ 81 252,06</td></tr><tr><td></td><td colspan=\"2\">Paid on 08/01/2025</td><td>$81 252,06</td></tr><tr><td></td><td colspan=\"2\">Balance Due</td><td>$0,00</td></tr><tr><td></td><td colspan=\"2\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td></tr></tbody></table></body></html>"
+    },
+    "4": {
+      "page": 0,
+      "kind": "text",
+      "bbox": [
+        13,
+        482,
+        399,
+        510
+      ],
+      "confidence": 0.957,
+      "text": "Total Amount (in worda)\nEightyOneThousandTwoHundredFiftyTwoDollarsandSixCensnly "
+    },
+    "5": {
+      "page": 0,
+      "kind": "figure",
+      "bbox": [
+        490,
+        503,
+        605,
+        559
+      ],
+      "confidence": 0.957,
+      "text": ""
+    },
+    "6": {
+      "page": 0,
+      "kind": "text",
+      "bbox": [
+        483,
+        574,
+        599,
+        588
+      ],
+      "confidence": 0.957,
+      "text": "Authorized Signatory "
+    },
+    "7": {
+      "page": 0,
+      "kind": "header",
+      "bbox": [
+        498,
+        29,
+        612,
+        103
+      ],
+      "confidence": 0.957,
+      "text": "Logo "
+    }
+  }
+}

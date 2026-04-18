@@ -1,0 +1,50 @@
+{
+  "_fixture": "ocr_agentic_engine/tests/fixtures/classification/dl1.png",
+  "_page_count": 1,
+  "_block_count": 3,
+  "feature": "classification",
+  "text": "",
+  "blocks": {},
+  "handwriting_block_indices": [],
+  "category": "id_document",
+  "category_confidence_min": 0.5,
+  "notes": "",
+  "_block_ocr": {
+    "0": {
+      "page": 0,
+      "kind": "title",
+      "bbox": [
+        312,
+        0,
+        556,
+        39
+      ],
+      "confidence": 0.902,
+      "text": "COMMERCIAL DRIVER'S LICENSE "
+    },
+    "1": {
+      "page": 0,
+      "kind": "figure",
+      "bbox": [
+        25,
+        0,
+        277,
+        63
+      ],
+      "confidence": 0.902,
+      "text": "visitPA.com USA "
+    },
+    "2": {
+      "page": 0,
+      "kind": "figure",
+      "bbox": [
+        13,
+        57,
+        606,
+        344
+      ],
+      "confidence": 0.902,
+      "text": "4d DLN:99999999DUPS:00\n3DOB:08/04/1975\n4bEXP:08/05/20234aISS:03/01/2019\nSAMPLE \n\n2JANICE ANN \n8123MAINSTREET \nAPT.1\n\nCAENAE 9aEND:NONE 15SEX:16HGT:5'-06\"9HARRISBURG.PA17101-0000CLASS:F A 18EYES:BRO RTLE \n12RESTR:NONE CDL \nHanice fample 456789012345ORGANDONOR \n"
+    }
+  }
+}

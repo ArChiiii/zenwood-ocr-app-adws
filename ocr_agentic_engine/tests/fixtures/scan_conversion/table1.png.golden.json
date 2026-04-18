@@ -1,0 +1,26 @@
+{
+  "_fixture": "ocr_agentic_engine/tests/fixtures/scan_conversion/table1.png",
+  "_page_count": 1,
+  "_block_count": 1,
+  "feature": "scan_conversion",
+  "text": "",
+  "blocks": {},
+  "handwriting_block_indices": [],
+  "category": null,
+  "category_confidence_min": 0.5,
+  "notes": "",
+  "_block_ocr": {
+    "0": {
+      "page": 0,
+      "kind": "table",
+      "bbox": [
+        30,
+        37,
+        795,
+        560
+      ],
+      "confidence": 0.94,
+      "text": "<html><body><table><tbody><tr><td>First Name</td><td>Last Name</td><td>IAge</td><td>Country</td><td>Sex</td><td>Job Title</td></tr><tr><td>Isabella</td><td>Rossi</td><td>32</td><td>Italy</td><td>F</td><td>Software Engineer</td></tr><tr><td>Kenji</td><td>Tanaka</td><td>45</td><td>Japan</td><td>M</td><td>Architect</td></tr><tr><td>Olivia</td><td>Dubois</td><td>28</td><td>France</td><td>F</td><td>Marketing Manager</td></tr><tr><td>Samuel</td><td>Silva</td><td>51</td><td>Brazil</td><td>M</td><td>Accountant</td></tr><tr><td>Aisha</td><td>Khan</td><td>24</td><td>Pakistan</td><td>F</td><td>Data Analyst</td></tr><tr><td>William</td><td>Miller</td><td>39</td><td>United States</td><td>M</td><td>Teacher</td></tr><tr><td>Sofia</td><td>Garcia</td><td>60</td><td>Spain</td><td>F</td><td>Retired</td></tr><tr><td>David</td><td>Chen</td><td>31</td><td>China</td><td>M</td><td>Financial Analyst</td></tr><tr><td>Emily</td><td>Petrova</td><td>126</td><td>Russia</td><td>F</td><td>Graphic Designer</td></tr><tr><td>Michael</td><td>O'Connell</td><td>48</td><td>Ireland</td><td>M</td><td>Project Manager</td></tr><tr><td>Lena</td><td>I Schmidt</td><td>29</td><td>Germany</td><td>F</td><td>Research Scientist</td></tr><tr><td>Javier</td><td>I Vargas</td><td>55</td><td>Mexico</td><td>M</td><td>Business Owner</td></tr><tr><td>Chloe</td><td>Singh</td><td>22</td><td>India</td><td>F</td><td>Student</td></tr><tr><td>Ethan</td><td>Novak</td><td>37</td><td>Czech Republic</td><td>M</td><td>Sales Representative</td></tr><tr><td>Grace</td><td>Lee</td><td>41</td><td>South Korea</td><td>F</td><td>Nurse</td></tr><tr><td>Noah</td><td>Dubois</td><td>34</td><td>Canada</td><td>M</td><td>Web Developer</td></tr><tr><td>Amelia</td><td>Santos</td><td>27</td><td>Portugal</td><td>F</td><td>Human Resources Managerl</td></tr><tr><td>Benjamin</td><td>Kowalski</td><td>58</td><td>Poland</td><td>M</td><td>Engineer</td></tr><tr><td>Harper</td><td>Jensen</td><td>25</td><td>Denmark</td><td>F</td><td>Journalist</td></tr><tr><td>Lucas</td><td>1 Nkosi</td><td>43</td><td>South Africa</td><td>M</td><td>Doctor</td></tr></tbody></table></body></html>"
+    }
+  }
+}

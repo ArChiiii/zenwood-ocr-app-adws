@@ -1,0 +1,44 @@
+[project]
+name = "ocr-agentic-engine"
+version = "0.1.0"
+description = "OCR + LLM agentic document reconstruction engine — L1 geometry, L2 annotations, L3 renderers"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "fastapi==0.135.3",
+  "uvicorn[standard]==0.44.0",
+  "python-multipart",
+  "pydantic>=2.7",
+  "paddlepaddle-gpu==3.3.1 ; sys_platform == 'linux'",
+  "paddlepaddle==3.3.1 ; sys_platform != 'linux'",
+  "paddleocr==3.4.0",
+  "paddlex[ocr]==3.4.0",
+  "pypdfium2",
+  "Pillow",
+  "numpy",
+  "opencv-python-headless",
+  "ollama>=0.6.1",
+  "redlines>=0.4",
+  "reportlab==4.4.10",
+  "python-docx==1.2.0",
+  "openpyxl>=3.1",
+  "python-pptx>=1.0",
+  "langid>=1.1",
+  "PyJWT>=2.8",
+  "pypdf>=4.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8", "pytest-asyncio>=0.23", "httpx>=0.27"]
+
+[[tool.uv.index]]
+name = "paddle-cu118"
+url = "https://www.paddlepaddle.org.cn/packages/stable/cu118/"
+explicit = true
+
+[tool.uv.sources]
+paddlepaddle-gpu = { index = "paddle-cu118" }
+
+[tool.pytest.ini_options]
+testpaths = ["ocr_agentic_engine/tests"]
+markers = ["e2e: requires live Ollama + PaddleOCR"]
+addopts = "-m 'not e2e'"
