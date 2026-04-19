@@ -55,4 +55,40 @@ The engine implements a strict three-layer pipeline (see `README.md` and `docs/a
 
 Defined in `.env.example`. Commonly flipped during local work: `OLLAMA_HOST`, `ENGINE_USE_NATIVE_TOOLS`, `ENGINE_OCR_CACHE=0` (to bypass the Paddle cache), `ENGINE_MODELS_JSON` (override the agent→model mapping).
 
-What you created will be reviewd by codex 
+## Project Memory System
+
+This project maintains institutional knowledge in `docs/project_notes/` for consistency across sessions.
+
+### Memory Files
+
+- **bugs.md** — Bug log with dates, solutions, and prevention notes
+- **decisions.md** — Architectural Decision Records (ADRs) with context and trade-offs
+- **key_facts.md** — Project configuration, ports, URLs, env vars, fixtures layout, GPU budget
+- **issues.md** — Work log with date, description, and follow-up backlog
+
+### Memory-Aware Protocols
+
+**Before proposing architectural changes:**
+- Check `docs/project_notes/decisions.md` for existing ADRs (001 extraction, 002 L1/L2/L3 separation, 003 gates + budgets, 004 eval-first, 005 renderers, 006 monolith retirement).
+- Verify the proposed approach doesn't conflict. If it does, acknowledge the ADR and explain why revisiting is warranted (and update the ADR entry with a revision date).
+
+**When encountering errors or bugs:**
+- Search `docs/project_notes/bugs.md` for similar issues first (PaddleOCR GPU OOM, HTML extractor CSS pollution, annotated-PNG discovery leak, CLI relative-path issues are all logged).
+- Apply known solutions; add new entries when resolved.
+
+**When looking up project configuration:**
+- Check `docs/project_notes/key_facts.md` for ports, env vars, Ollama host, model defaults, GPU budget, fixture layout.
+
+**When completing work:**
+- Log completed work in `docs/project_notes/issues.md` with date + brief description.
+
+**When user requests memory updates:**
+- Update the appropriate file. Keep entries concise (1–3 lines per point), dated, and linked to files/ADRs.
+
+### Style Guidelines for Memory Files
+
+- Bullet lists over tables.
+- Always include dates (YYYY-MM-DD).
+- Reference code by path, not paraphrase.
+- Never store secrets or ephemeral IDs in memory files.
+ 

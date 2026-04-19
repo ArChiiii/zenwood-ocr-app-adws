@@ -51,7 +51,8 @@ def _discover() -> list[ReconstructCase]:
         for p in sorted(d.iterdir()):
             if (p.is_file()
                     and p.suffix.lower() in {".pdf", ".png", ".jpg", ".jpeg"}
-                    and ".annotated" not in p.suffixes):
+                    and ".annotated" not in p.suffixes
+                    and not p.name.endswith(".golden.json")):
                 out.append(ReconstructCase(feature, p))
     return out
 
@@ -72,8 +73,10 @@ def _extract_txt(data: bytes) -> str:
 
 
 def _extract_html(data: bytes) -> str:
-    # strip tags — crude but sufficient for content equality
-    no_tags = re.sub(r"<[^>]+>", " ", data.decode("utf-8", errors="replace"))
+    src = data.decode("utf-8", errors="replace")
+    # drop <style> and <script> blocks (their text content would otherwise pollute)
+    src = re.sub(r"<(style|script)\b[^>]*>.*?</\1>", " ", src, flags=re.DOTALL | re.IGNORECASE)
+    no_tags = re.sub(r"<[^>]+>", " ", src)
     return re.sub(r"\s+", " ", no_tags).strip()
 
 
