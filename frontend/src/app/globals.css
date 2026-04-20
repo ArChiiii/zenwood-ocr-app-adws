@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --bg: #fafaf9;
+  --bg-card: #ffffff;
+  --bg-surface: #f5f5f4;
+  --text-primary: #1c1917;
+  --text-secondary: #78716c;
+  --text-muted: #a8a29e;
+  --border: #e7e5e4;
+  --accent: #7C3AED;
+  --accent-light: #EDE9FE;
+  --accent-hover: #6D28D9;
+  --success: #166534;
+  --success-bg: #dcfce7;
+  --warning: #92400e;
+  --warning-bg: #fef3c7;
+  --error: #991b1b;
+  --error-bg: #fee2e2;
+  --radius: 10px;
+
+  /* Nav dimensions */
+  --bottom-nav-height: 64px;
+  --sidebar-width: 260px;
+
+  /* Named aliases for plan-spec tokens */
+  --color-primary: var(--accent);
+  --color-primary-hover: var(--accent-hover);
+  --color-surface: var(--bg-card);
+  --color-surface-alt: var(--bg-surface);
+  --color-text: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+
+  /* Border radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+  --shadow-md: 0 4px 12px 0 rgb(0 0 0 / 0.10), 0 2px 6px -2px rgb(0 0 0 / 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, .mono {
+  font-family: 'JetBrains Mono', monospace;
+}
