@@ -1,7 +1,9 @@
 'use client'
 
-import { PdfViewer } from '@/components/PdfViewer'
+import dynamic from 'next/dynamic'
 import { DocxViewer } from '@/components/DocxViewer'
+
+const PdfViewer = dynamic(() => import('@/components/PdfViewer').then(m => m.PdfViewer), { ssr: false })
 import { TxtViewer } from '@/components/TxtViewer'
 import { XlsxPptxViewer } from '@/components/XlsxPptxViewer'
 import type { FormattedResult } from '@/lib/engine'

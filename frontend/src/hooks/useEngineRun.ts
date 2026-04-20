@@ -105,9 +105,21 @@ export function useEngineRun(): UseEngineRunResult {
       }
     } catch (err) {
       if (controller.signal.aborted) return
-      const msg = err instanceof EngineError ? err.detail : err instanceof Error ? err.message : String(err)
+      let msg: string
+      if (err instanceof EngineError) {
+        msg = err.detail
+      } else if (err instanceof TypeError) {
+        // fetch() throws TypeError on DNS/connection/CORS failures
+        msg = `Network error: unable to reach the OCR engine. Check your connection, VPN/Tailscale, and that the backend is running.`
+      } else if (err instanceof Error) {
+        msg = err.message === 'network error' || err.name === 'NetworkError'
+          ? `Network error while streaming from the engine. The backend may have dropped the connection — try again.`
+          : err.message
+      } else {
+        msg = String(err)
+      }
       setError(msg)
-      console.error('[engine] Stream error:', msg)
+      console.error('[engine] Stream error:', msg, err)
     } finally {
       if (!controller.signal.aborted) {
         setRunning(false)

@@ -1,0 +1,55 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e7] [cursor=pointer]:
+    - img [ref=e8]
+  - generic [ref=e11]:
+    - complementary [ref=e12]:
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - img "Zentral AI" [ref=e15]
+          - generic [ref=e16]: Zentral AI
+        - button "Collapse sidebar" [ref=e17]:
+          - img [ref=e18]
+      - navigation [ref=e20]:
+        - link "Dashboard" [ref=e21] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e23]
+          - text: Dashboard
+        - link "Upload" [ref=e28] [cursor=pointer]:
+          - /url: /dashboard/upload
+          - img [ref=e30]
+          - text: Upload
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: D
+          - paragraph [ref=e36]: demo@zentral.ai
+        - button "Sign out" [ref=e37]:
+          - img [ref=e38]
+          - text: Sign out
+    - main [ref=e41]:
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - heading "Upload Document" [level=1] [ref=e45]
+          - paragraph [ref=e46]: Select a feature and upload your document
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49]: Feature
+            - combobox [ref=e50]:
+              - option "Handwriting Removal" [selected]
+              - option "Scan Conversion"
+              - option "Document Comparison"
+              - option "Document Classification"
+            - paragraph [ref=e51]: Extract clean typed text, removing handwritten annotations
+          - generic [ref=e52]:
+            - generic [ref=e53]: Output Format
+            - combobox [ref=e54]:
+              - option "Word Document (.docx)" [selected]
+              - option "PDF Document (.pdf)"
+              - option "Plain Text (.txt)"
+              - option "Spreadsheet (.xlsx)"
+              - option "Presentation (.pptx)"
+          - generic [ref=e57] [cursor=pointer]:
+            - img [ref=e58]
+            - paragraph [ref=e61]: Drop file here or click to browse
+            - paragraph [ref=e62]: PDF, TIFF, PNG, JPEG, HEIC — max 50MB
+          - button "Submit" [disabled] [ref=e63]
+  - alert [ref=e64]

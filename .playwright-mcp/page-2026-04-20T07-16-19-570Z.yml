@@ -1,0 +1,47 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - img "Zentral AI" [ref=e6]
+          - generic [ref=e7]: Zentral AI
+        - button "Collapse sidebar" [ref=e8]:
+          - img [ref=e9]
+      - navigation [ref=e11]:
+        - link "Dashboard" [ref=e12] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e14]
+          - text: Dashboard
+        - link "Upload" [ref=e19] [cursor=pointer]:
+          - /url: /dashboard/upload
+          - img [ref=e21]
+          - text: Upload
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: D
+          - paragraph [ref=e27]: demo@zentral.ai
+        - button "Sign out" [ref=e28]:
+          - img [ref=e29]
+          - text: Sign out
+    - main [ref=e32]:
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - heading "Upload Document" [level=1] [ref=e36]
+          - paragraph [ref=e37]: Select a feature and upload your document
+        - generic [ref=e38]:
+          - generic [ref=e39]:
+            - generic [ref=e40]: Feature
+            - combobox [ref=e41]:
+              - option "Handwriting Removal"
+              - option "Scan Conversion"
+              - option "Document Comparison"
+              - option "Document Classification" [selected]
+            - paragraph [ref=e42]: Automatically categorise documents by type and content
+          - generic [ref=e48] [cursor=pointer]:
+            - img [ref=e49]
+            - paragraph [ref=e52]: Drop file here or click to browse
+            - paragraph [ref=e53]: PDF, TIFF, PNG, JPEG, HEIC — max 50MB
+          - button "Submit" [disabled] [ref=e54]
+  - button "Open Next.js Dev Tools" [ref=e60] [cursor=pointer]:
+    - img [ref=e61]
+  - alert [ref=e64]

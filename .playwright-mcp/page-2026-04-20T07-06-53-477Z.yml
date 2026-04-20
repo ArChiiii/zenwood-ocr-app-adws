@@ -1,0 +1,62 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e6] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=e7]:
+      - img [ref=e8]
+    - generic [ref=e11]:
+      - button "Open issues overlay" [ref=e12]:
+        - generic [ref=e13]:
+          - generic [ref=e14]: "0"
+          - generic [ref=e15]: "1"
+        - generic [ref=e16]: Issue
+      - button "Collapse issues badge" [ref=e17]:
+        - img [ref=e18]
+  - generic [ref=e20]:
+    - complementary [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - img "Zentral AI" [ref=e24]
+          - generic [ref=e25]: Zentral AI
+        - button "Collapse sidebar" [ref=e26]:
+          - img [ref=e27]
+      - navigation [ref=e29]:
+        - link "Dashboard" [ref=e30] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e32]
+          - text: Dashboard
+        - link "Upload" [ref=e37] [cursor=pointer]:
+          - /url: /dashboard/upload
+          - img [ref=e39]
+          - text: Upload
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: D
+          - paragraph [ref=e45]: demo@zentral.ai
+        - button "Sign out" [ref=e46]:
+          - img [ref=e47]
+          - text: Sign out
+    - main [ref=e50]:
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - heading "Upload Document" [level=1] [ref=e54]
+          - paragraph [ref=e55]: Select a feature and upload your document
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]: Feature
+            - combobox [ref=e59]:
+              - option "Handwriting Removal"
+              - option "Scan Conversion"
+              - option "Document Comparison" [selected]
+              - option "Document Classification"
+            - paragraph [ref=e60]: Compare two documents and highlight all differences
+          - generic [ref=e66] [cursor=pointer]:
+            - generic [ref=e82]: 📄
+            - generic [ref=e83]:
+              - paragraph [ref=e84]: a_small.pdf
+              - paragraph [ref=e85]: 1.8 KB
+            - button "✕" [ref=e86]
+          - generic [ref=e76] [cursor=pointer]:
+            - img [ref=e77]
+            - paragraph [ref=e80]: Drop revised document here
+            - paragraph [ref=e81]: PDF, TIFF, PNG, JPEG, HEIC — max 50MB
+          - button "Submit" [disabled] [ref=e72]
+  - alert [ref=e73]

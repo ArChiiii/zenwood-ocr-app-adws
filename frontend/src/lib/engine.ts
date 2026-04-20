@@ -197,7 +197,13 @@ export async function* streamEngine({ feature, files, format, model, signal }: S
   const qs = params.toString()
   const url = `${ENGINE_URL}/engine/${feature}${qs ? `?${qs}` : ''}`
 
-  const res = await fetch(url, { method: 'POST', headers, body: form, signal })
+  let res: Response
+  try {
+    res = await fetch(url, { method: 'POST', headers, body: form, signal })
+  } catch (err) {
+    if (signal?.aborted) throw err
+    throw new EngineError(0, `Can't reach engine at ${ENGINE_URL}. Check that the backend is running and reachable (Tailscale, CORS, VPN).`)
+  }
 
   if (!res.ok) {
     let detail = `HTTP ${res.status}`
@@ -210,7 +216,14 @@ export async function* streamEngine({ feature, files, format, model, signal }: S
   let buffer = ''
 
   while (true) {
-    const { done, value } = await reader.read()
+    let chunk: ReadableStreamReadResult<Uint8Array>
+    try {
+      chunk = await reader.read()
+    } catch (err) {
+      if (signal?.aborted) throw err
+      throw new EngineError(0, `Connection to engine at ${ENGINE_URL} was interrupted mid-stream. The backend may have crashed, timed out, or lost network.`)
+    }
+    const { done, value } = chunk
     if (done) break
     buffer += decoder.decode(value, { stream: true })
 

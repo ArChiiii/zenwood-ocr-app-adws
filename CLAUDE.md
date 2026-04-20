@@ -18,6 +18,18 @@ Eval harness: `uv run python -m ocr_agentic_engine.evals run --feature <feature>
 
 E2E benchmark over fixtures: `uv run python scripts/run_e2e_bench.py [--runs N] [--features ...] [--scan-format docx] [--keep-tmp]`. Outputs land in `.e2e-results/<UTC-timestamp>/`.
 
+## Frontend (local Next.js, remote backend)
+
+The Next.js frontend in `frontend/` runs locally and talks to the `ocr_agentic_engine` over HTTP (URL in `frontend/.env.local::NEXT_PUBLIC_ENGINE_URL`). Backend is hosted remotely (typically a Tailscale-reachable host) — do **not** spawn it locally; PaddleOCR-GPU + Ollama models are required.
+
+- Start: `/start-frontend` slash command (`.claude/commands/start-frontend.md`). It verifies engine `/health`, resolves port conflicts on 3000 interactively, and spawns inside a named tmux session.
+- Tmux session name: `zenwood-ocr-frontend` (always — never run `npm run dev` in foreground or via `nohup`/`&`).
+- Default port: `3000` (Next.js bound via `PORT` env). Fallbacks: 3001/3002/3003 if the user opts out of killing the holder.
+- Tail logs: `tmux capture-pane -p -t zenwood-ocr-frontend` (add `| tail -50` for the last chunk; use `-S -200` to scroll back further).
+- Attach interactively: `tmux attach -t zenwood-ocr-frontend` (detach with `Ctrl-b d`).
+- Stop: `tmux kill-session -t zenwood-ocr-frontend`.
+- CORS: the remote engine's `ENGINE_CORS_ORIGINS` must include the frontend origin. If a non-3000 port was chosen, the user must add `http://localhost:<port>` on the remote host.
+
 ## Architecture — L1/L2/L3
 
 The engine implements a strict three-layer pipeline (see `README.md` and `docs/architecture-ocr-llm-reconstruction.md`). **LLMs never regenerate text at the format boundary** — renderers consume `(L1 geometry, L2 annotations)` only.

@@ -6,25 +6,33 @@ Execute end-to-end (E2E) tests using Playwright browser automation (MCP Server).
 
 adw_id: $1 if provided, otherwise generate a random 8 character hex string
 agent_name: $2 if provided, otherwise use 'test_e2e'
-e2e_test_file: $3
-application_url: $4 if provided, otherwise use http://localhost:5173
+e2e_test_file: $3 — absolute or repo-relative path to a user-story markdown file (e.g. `app_docs/e2e_tests/test_classification.md`)
+application_url: $4 if provided, otherwise use http://localhost:3000
+
+## Test Environment
+
+- Frontend: Next.js at `application_url` (default `http://localhost:3000`).
+- Backend: remote `ocr_agentic_engine` reached via `NEXT_PUBLIC_ENGINE_URL` in `frontend/.env.local`. Never started locally (PaddleOCR-GPU required).
+- Fixtures live in `ocr_agentic_engine/tests/fixtures/<feature>/` — reference them by absolute path when uploading.
+- Authentication is real Supabase (HS256 JWT). Use credentials from env `E2E_EMAIL` / `E2E_PASSWORD`, defaulting to the demo account `demo@zentral.ai` / `DemoZentral2026!` when unset. Log in via the `/login` route before each story; sessions are not reused across test files.
+- A run can take minutes (OCR + LLM). Allow generous wait budgets (up to ~8 min) when polling for `✓ Complete` or the error banner (`div[style*="error-bg"]`).
 
 ## Instructions
 
 - Read the `e2e_test_file`
 - Digest the `User Story` to first understand what we're validating
-- IMPORTANT: Execute the `Test Steps` detailed in the `e2e_test_file` using Playwright browser automation
+- IMPORTANT: Execute the `Test Steps` detailed in the `e2e_test_file` using the Playwright MCP tools (`mcp__playwright__browser_*`)
 - Review the `Success Criteria` and if any of them fail, mark the test as failed and explain exactly what went wrong
 - Review the steps that say '**Verify**...' and if they fail, mark the test as failed and explain exactly what went wrong
 - Capture screenshots as specified
 - IMPORTANT: Return results in the format requested by the `Output Format`
 - Initialize Playwright browser in headed mode for visibility
 - Use the `application_url`
-- Allow time for async operations and element visibility
+- Allow time for async operations and element visibility — this app's pipeline can take minutes
 - IMPORTANT: After taking each screenshot, save it to `Screenshot Directory` with descriptive names. Use absolute paths to move the files to the `Screenshot Directory` with the correct name.
-- Capture and report any errors encountered
+- Capture and report any errors encountered. Specifically poll for `✓ Complete` and the error banner (`div[style*="error-bg"]`) in parallel; surface the banner text verbatim if it appears.
 - Ultra think about the `Test Steps` and execute them in order
-- If you encounter an error, mark the test as failed immediately and explain exactly what went wrong and on what step it occurred. For example: '(Step 1 ❌) Failed to find element with selector "query-input" on page "http://localhost:5173"'
+- If you encounter an error, mark the test as failed immediately and explain exactly what went wrong and on what step it occurred. For example: '(Step 1 ❌) Failed to find element with selector "feature-select" on page "http://localhost:3000/dashboard/upload"'
 - Use `pwd` or equivalent to get the absolute path to the codebase for writing and displaying the correct paths to the screenshots
 
 ## Setup

@@ -1,0 +1,10 @@
+[     666ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/dashboard/upload:0
+[     725ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[     740ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[   35785ms] [LOG] [engine] stage_started: ocr @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[   35787ms] [LOG] [engine] stage_finished: ocr @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[   35791ms] [LOG] [engine] stage_started: annotate @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[   35792ms] [LOG] [engine] stage_finished: annotate @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[   35792ms] [LOG] [engine] stage_started: classifier @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[   47365ms] [LOG] [engine] stage_finished: classifier @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[   47365ms] [LOG] [engine] run_completed: feature=classification @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
